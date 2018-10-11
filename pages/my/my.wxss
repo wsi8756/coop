@@ -1,0 +1,16 @@
+/* pages/my/my.wxss */
+.userinfo-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  background-size: cover;
+  background-color: white;
+}
+
+.userinfo-nickname {
+  font-size: 32rpx;
+  color: #007aff;
+  background-color: white;
+  background-size: cover;
+}

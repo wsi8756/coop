@@ -1,0 +1,15 @@
+/* pages/add_plan/step3.wxss */
+
+.input_long{
+width: 310px;
+ background-color: #333;
+color: #eee;
+}
+
+.textarea_article {
+  width: 300px;
+  height: 594rpx;
+  color: #fff;
+  background-color: #ccc;
+
+}

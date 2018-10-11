@@ -1,0 +1,9 @@
+<!--pages/add_plan/step2.wxml-->
+<view> {{message}} </view>
+
+<checkbox-group class="checkbox-group" bindchange="checkboxChange">
+   <label class="checkbox" wx:for="{{profession}}">
+    <checkbox value="{{item.id}}" checked="{{item.checked}}"/>{{item.value}}
+  </label>
+</checkbox-group>
+<button bindtap="next">选好啦！</button>

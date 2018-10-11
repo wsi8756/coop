@@ -1,0 +1,12 @@
+<!--pages/add_plan/step1.wxml-->
+<view> {{message}} </view>
+
+<view wx:for="{{array}}"> {{item}} </view>
+<radio-group class="radio-group" bindchange="radioChange">
+  <label class="radio" wx:for="{{works_type}}">
+    <radio value="{{item.id}}" checked="{{item.checked}}"/>{{item.value}}
+  </label>
+
+</radio-group>
+
+<button bindtap="next">选好啦！</button>

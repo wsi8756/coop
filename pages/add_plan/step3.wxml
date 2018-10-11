@@ -1,0 +1,18 @@
+<!--pages/add_plan/step3.wxml-->
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+
+  <view class="section">
+    <view class="section__title">作品标题</view>
+    <input name="input" placeholder="暂时可以不填" />
+  </view>
+  <view class="section">
+    <view class="section__title">策划描述</view>
+    <view class="textarea_article">
+    <textarea name="describe" placeholder='介绍一下你的想法吧~'></textarea>
+    </view>
+  </view>
+  <view class="btn-area">
+    <button formType="submit">发布约稿</button>
+  </view>
+</form>

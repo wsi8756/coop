@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<!-- 用户 openid -->
+  <view class="userinfo">
+    <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar"
+      style="background-image: url({{avatarUrl}})"
+    >{{nickName}}</button>
+    <view>
+      <button class="userinfo-nickname" bindtap="on">点击获取 openid</button>
+    </view>
+  </view>
