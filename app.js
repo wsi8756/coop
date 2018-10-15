@@ -1,10 +1,11 @@
 App({
 
   globalData: {
+    domain: 'http://192.168.0.19:8882/api',
     userInfo: {},
-    newPlan: {
-      worksType:"",
-      profession:[""],
+    tempPlan: {
+      worksType:null,
+      profession:[],
       title:"",
       describe:""
     }
@@ -86,5 +87,26 @@ App({
    */
   onError: function (msg) {
 
+  },
+
+  alert: function (params) {
+  },
+  console: function (msg) {
+    console.log(msg)
+  },
+
+  buildUrl: function (Url) {
+    var Res
+    Res = this.globalData.domain + '/' + Url
+    return Res
+  },
+  header:function(){
+    var res 
+    res = {
+      "Content-Type": "application/json"
+      
+    }
   }
+
+
 })
