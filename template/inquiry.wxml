@@ -1,0 +1,55 @@
+<!-- 单选题——选完后直接下一步 -->
+<template name="inquiry-mono">
+  <view class="head" style="background-image: url({{bgUrl}})">
+    <!-- <image src="/img/1.png"  mode="aspectFit"></image> -->
+  </view>
+
+  <!-- 问题 -->
+  <view class="section" style="width:750rpx">
+    <view class="dialog" style="width:76%;text-align:center">
+      <text>  {{msg}} </text>
+    </view>
+  </view>
+  <!-- 选项 -->
+  <view class="section">
+    <view class="option" style="width:650rpx">
+      <radio-group bindchange="choose">
+        <label class="option" wx:for="{{option}}">
+          <checkbox value="{{item.index}}" checked="{{item.checked}}" hidden="false" />{{item.option}}
+
+        </label>
+      </radio-group>
+    </view>
+  </view>
+</template>
+
+<!-- 多选题——标签 -->
+<template name="inquiry-multiTag">
+  <view class="head" style="background-image: url({{bgUrl}})">
+    <!-- <image src="/img/1.png"  mode="aspectFit"></image> -->
+  </view>
+  <!-- 问题 -->
+  <view class="section" style="width:750rpx">
+    <view class="dialog" style="width:76%;text-align:center">
+      <text>  {{msg}} </text>
+    </view>
+  </view>
+    <!-- 选项 -->
+  <view class="section" style="display:block">
+
+    <view class="groupTag">
+      <checkbox-group bindchange="checkboxChange">
+        <block wx:for="{{option}}">
+
+          <label class="checkbox {{item.checked?'is_checked':''}}">
+            <checkbox value="{{item.index}}" checked="{{item.checked}}" hidden="false" />{{item.option}}
+
+          </label>
+
+        </block>
+      </checkbox-group>
+    </view>
+
+  </view>
+    <button class="btn-answer" bindtap="next">选好啦！</button>
+</template>

@@ -1,36 +1,26 @@
-// pages/add_plan/step1.js
-
-var app = getApp()
-var common = require('add_plan.js')
-
+// pages/recruitlist/recruitlist.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    inquiry: {
-      msg: '请问想要创作什么类型的作品呢？',
-      option: [
-        { index: 0, option: '原创音乐' },
-        { index: 1, option: '翻唱' },
-        { index: 2, option: '填词翻唱' },
-        { index: 3, option: '改编音乐' },
-        { index: 4, option: '视频' },
-      ],
-          bgUrl: '../../img/top.png'
-    },
+    recruitlist: [
+      {
+        recruitId: 0,//recruit表中的id
+        worksType: "",//recruit对应的plan的大作品类型
+        planTitle: "",//recruit对应的plan的标题
+        planDescribe: "",//recruit表中对职种的要求
+        describe: "",//recruit表中对职种的要求
+        profession: [""],//招募的职种
+      }
+    ]
+  },
 
 
-  },
-  choose: function (e) {
-    console.log('选择了：', e.detail.value,'，策划数据变为：')
-    app.globalData.newPlan.worksType = this.data.inquiry.option[e.detail.value].option
-    console.log(app.globalData.newPlan.worksType)
-    wx.navigateTo({
-      url: './step2'
-    })
-  },
+
+
+
 
   /**
    * 生命周期函数--监听页面加载

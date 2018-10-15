@@ -1,0 +1,40 @@
+<!--pages/conversation/conversation.wxml-->
+
+
+<view wx:for="{{msglist}}">
+  <template is="{{item.me?'dialogBox-me':'dialogBox'}}" data="{{item}}" />
+</view>
+<view class="section" style="height:60rpx">
+</view>
+<view class="input-dialog">
+
+  <input class="input" name="myMsg" placeholder="说点什么吧" />
+</view>
+
+<!-- <template is="dialogBox" data="{{msglist}}" /> -->
+
+
+<template name="dialogBox">
+  <view class="section" style="float:left">
+    <view class="msgFrom">
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{item.avatarUrl}}" mode="aspectFill"></image>
+      <text class="userinfo-nickname">{{item.name}}</text>
+      <text class="timeinfo">{{item.time}}</text>
+    </view>
+    <text class="dialog">{{item.msg}}</text>
+  </view>
+</template>
+
+
+<template name="dialogBox-me">
+  <view class="section" style="float:right">
+    <view class="msgFrom" style="float:right">
+      <text class="timeinfo">{{item.time}}</text>
+      <text class="userinfo-nickname">{{item.name}}</text>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{item.avatarUrl}}" mode="aspectFill"></image>
+
+
+    </view>
+    <text class="dialog-me">{{item.msg}}</text>
+  </view>
+</template>

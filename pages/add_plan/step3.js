@@ -10,20 +10,20 @@ Page({
 
   },
   formSubmit: function (e) {
-    app.globalData.tempPlan.title = e.detail.value.input
-    app.globalData.tempPlan.describe = e.detail.value.describe
-    console.log("约稿信息为",app.globalData.tempPlan)
+    app.globalData.newPlan.title = e.detail.value.input
+    app.globalData.newPlan.describe = e.detail.value.describe
+    console.log("约稿信息为",app.globalData.newPlan)
     wx.request({
       // url: app.buildUrl('login'),
-      url:'http://192.168.0.10:8882/api/test',
+      url:'http://192.168.0.19:8882/api/test',
       method: 'POST',
       header: {
         // 'content-type': 'application/x-www-form-urlencoded'
         "Content-Type": "application/json"
       },
-      data: app.globalData.tempPlan,
+      data: app.globalData.newPlan,
       success: function (res) {
-        console.log("成功发送", app.globalData.tempPlan)
+        console.log("成功发送", app.globalData.newPlan)
       }
     })
 

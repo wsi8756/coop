@@ -7,23 +7,51 @@ Page({
    * 页面的初始数据
    */
   data: {
-    message: '请问想要招募哪些技能的圈友呢？',
- 
-    profession: [
-      { id: 1, value: '演唱' },
-      { id: 10, value: '作曲' },
-      { id: 13, value: '混音' },
-    ]
+
+
+    inquiry: {
+      msg: '请问想要招募哪些技能的圈友呢？',
+     
+      option: [
+        { index: 0, option: '演唱' },
+        { index: 1, option: '作曲' },
+        { index: 2, option: '混音' },
+      ],
+      bgUrl: '../../img/top.png'
+    }
+
+   
   },
+
   checkboxChange: function (e) {
-    console.log('checkbox发生change事件，携带value值为：', e.detail.value)
-    app.globalData.tempPlan.profession = e.detail.value
-    console.log(app.globalData.tempPlan.profession)
+    // console.log('checkbox发生change事件，携带value值为：', e.detail.value)
+
+    var option = this.data.inquiry.option;
+      var checkArr = e.detail.value;
+     for (var i = 0; i < option.length; i++) {
+      if (checkArr.indexOf(i + "") != -1) {
+        option[i].checked = true;
+      } else {
+        option[i].checked = false;
+      }
+     }
+    var s='inquiry.option'
+    this.setData({
+      [s]: option
+    })
+    app.globalData.newPlan.profession=[];
+    for (var i = 0; i < checkArr.length; i++)
+    {
+      app.globalData.newPlan.profession[i] = this.data.inquiry.option[checkArr[i]].option
+         
+    }
+    console.log('现在选择了：',app.globalData.newPlan.profession)
   },
   next: function (e) {
     wx.navigateTo({
       url: './step3'
     })
+    console.log('策划信息为：',app.globalData.newPlan)
   },
   
 

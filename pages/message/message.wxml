@@ -1,0 +1,36 @@
+<!--pages/message/message.wxml-->
+<view wx:for="{{conversationlist}}">
+  <view class="section">
+    <view class="box" >
+      <image bindtap="bindViewTap" class="userinfo-avatar-l" src="{{item.avatarUrl}}" mode="aspectFill">
+
+
+      </image>
+      <view wx:if="{{item.msgnew}}" class="new" >
+       {{item.msgnew==1?'':item.msgnew}}</view>
+
+    </view>
+    <view class="box"style="flex-direction:column;margin-top:20rpx;margin-left:15rpx">
+      <view>
+        <text class="userinfo-nickname">{{item.name}}</text>
+      </view>
+
+      <view class="textline">{{item.msg}}</view>
+    </view>
+
+    <view class="box" style="width:100rpx;flex-direction:column">
+        <view>   <text class="timeinfo" style="float:right">{{item.time}}</text></view>
+      <view>  <text class="label" style="float:right">私信</text></view>
+    
+    </view>
+
+
+
+
+
+
+  </view>
+  <view class="line"></view>
+
+
+</view>

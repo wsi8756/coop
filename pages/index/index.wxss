@@ -1,17 +1,33 @@
 /* pages/index/index.wxss */
 
-.userinfo-avatar {
-  width: 100rpx;
-  height: 100rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-  background-size: cover;
-  background-color: white;
+.btn-bottom {
+  
+  margin-top:30rpx;
+  width: 80vw;
+  font-size: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #a0c8e4;
+  color: #000;
+  border-radius: 30rpx;
 }
 
-.userinfo-nickname {
-  font-size: 32rpx;
-  color: #007aff;
-  background-color: white;
-  background-size: cover;
+ 
+.service_selection {
+  padding: 15px 10px;
+  background: #fff;
+}
+ 
+.service_selection label {
+  background: #a0c8e4;
+  padding: 6px 7px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+ 
+.service_selection .is_checked {
+  border: 1px solid #fe0002;
+  color: #fe0002;
+  background: #fff;
 }

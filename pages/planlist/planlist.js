@@ -1,35 +1,21 @@
-// pages/add_plan/step1.js
-
-var app = getApp()
-var common = require('add_plan.js')
-
+// pages/planlist/planlist.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    inquiry: {
-      msg: '请问想要创作什么类型的作品呢？',
-      option: [
-        { index: 0, option: '原创音乐' },
-        { index: 1, option: '翻唱' },
-        { index: 2, option: '填词翻唱' },
-        { index: 3, option: '改编音乐' },
-        { index: 4, option: '视频' },
-      ],
-          bgUrl: '../../img/top.png'
-    },
+    planlist: [
+      {
+        plan_id:0,//plan表中的id
+        worksType: "",//招募的大作品类型（文字）
+        profession: [""],//该plan正在招募中的职种（对应recruit中state为1,is_delete为0的）。
+        title: "",//plan表中的title
+        describe: "",//plan表中的描述
+        time:"",//最后更新时间，update_time减去现在时间。
+      }
+    ]
 
-
-  },
-  choose: function (e) {
-    console.log('选择了：', e.detail.value,'，策划数据变为：')
-    app.globalData.newPlan.worksType = this.data.inquiry.option[e.detail.value].option
-    console.log(app.globalData.newPlan.worksType)
-    wx.navigateTo({
-      url: './step2'
-    })
   },
 
   /**

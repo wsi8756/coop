@@ -2,9 +2,9 @@ App({
 
   globalData: {
     userInfo: {},
-    tempPlan: {
-      worksType:null,
-      profession:[],
+    newPlan: {
+      worksType:"",
+      profession:[""],
       title:"",
       describe:""
     }

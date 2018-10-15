@@ -2,17 +2,17 @@
 
 <form bindsubmit="formSubmit" bindreset="formReset">
 
-  <view class="section">
+  <view class="section-input">
     <view class="section__title">作品标题</view>
-    <input name="input" placeholder="暂时可以不填" />
+    <input class="input" name="input" placeholder="暂时可以不填" />
   </view>
-  <view class="section">
+  <view class="section-input">
     <view class="section__title">策划描述</view>
-    <view class="textarea_article">
+    <view class="input">
     <textarea name="describe" placeholder='介绍一下你的想法吧~'></textarea>
     </view>
   </view>
-  <view class="btn-area">
-    <button formType="submit">发布约稿</button>
+  <view >
+    <button class="btn-bottom" formType="submit">发布约稿</button>
   </view>
 </form>

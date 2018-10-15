@@ -1,9 +1,18 @@
 <!--pages/add_plan/step2.wxml-->
-<view> {{message}} </view>
+<import src='../../template/inquiry.wxml'/>
 
-<checkbox-group class="checkbox-group" bindchange="checkboxChange">
-   <label class="checkbox" wx:for="{{profession}}">
-    <checkbox value="{{item.id}}" checked="{{item.checked}}"/>{{item.value}}
-  </label>
+<template is="inquiry-multiTag" data="{{...inquiry}}" />
+
+
+<checkbox-group bindchange="serviceValChange">
+        <view class="service_selection flex">
+          <block wx:for="{{allGoodsFilte}}">
+            <view class=" item">
+ 
+              <label class="checkbox {{item.checked?'is_checked':''}}">
+                <checkbox value="{{item.value}}" checked="{{item.checked}}" hidden="false" />{{item.name}}
+              </label>
+            </view>
+          </block>
+        </view>
 </checkbox-group>
-<button bindtap="next">选好啦！</button>

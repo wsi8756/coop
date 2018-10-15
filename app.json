@@ -1,12 +1,17 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/test/test",
-    "pages/my/my",
+    "pages/recruitlist/recruitlist",
+            "pages/planlist/planlist",
+            "pages/message/message",
+            "pages/conversation/conversation",
     "pages/add_plan/step1",
     "pages/add_plan/step2",
     "pages/add_plan/step3",
-    "pages/plan/plan"
+    "pages/plan/plan",
+
+        "pages/index/index",
+        "pages/test/test",
+        "pages/my/my"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -22,7 +27,7 @@
         "text": "首页"
       },
           {
-            "pagePath": "pages/test/test",
+            "pagePath": "pages/message/message",
             "text": "实验"
           },
       {
