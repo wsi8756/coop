@@ -88,6 +88,10 @@ App({
   onError: function (msg) {
 
   },
+<<<<<<< HEAD
+  build:function(){
+    
+=======
 
   alert: function (params) {
   },
@@ -106,6 +110,7 @@ App({
       "Content-Type": "application/json"
       
     }
+>>>>>>> master
   }
 
 
